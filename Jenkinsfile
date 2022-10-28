@@ -28,13 +28,13 @@ pipeline {
             }
         }
         stage ('test') {
-            step {
+            steps {
                 sh 'mvn test'
             }
 
         }
         stage ('checkstyle anylsis'){
-            step {
+            steps {
                 sh 'mvn checkstyle:checkstyle'
             }
         }
